@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+int potencia(int base, int exp)
+{
+	if(exp==1)
+		return base;
+	return base*potencia(base,exp-1);
+}
+int main()
+{
+	int base,exp;
+	cout<<"Ingrese el numero base: ";
+	cin>>base;
+	cout<<"Ingrese el exponente: ";
+	cin>>exp;
+	if(exp>0)
+		cout<<base<<" elevado a "<<exp<<" es: "<<potencia(base,exp)<<endl;
+	else
+		cout<<"Valor no permitido";
+	return 0;
+}
